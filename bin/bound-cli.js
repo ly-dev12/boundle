@@ -62,7 +62,7 @@ async function argvsComprober(argument) {
     }
 
     if (
-      fs.existsSync(`${path.join(__dirname, "../boundles/" + carpetNamePkg)}`)
+      fs.existsSync(`${path.join(__dirname, `../boundles/${carpetNamePkg}`)}`)
     ) {
       console.log(
         Error(
@@ -98,8 +98,8 @@ async function argvsComprober(argument) {
 
       //console.log(arrayPkages);
       //console.log(comands.comands[5]);
-      createBoundle(
-        `${path.join(__dirname, "../boundles/" + carpetNamePkg)}`,
+      await createBoundle(
+        `${path.join(__dirname, `../boundles/${carpetNamePkg}`)}`,
         `${carpetNamePkg}`,
         arrayPkages
       );
