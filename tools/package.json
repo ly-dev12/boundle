@@ -1,0 +1,24 @@
+{
+  "name": "cli-boundle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "cli-boundle": "bound-cli.js"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.2",
+    "node-cmd": "^3.0.0",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

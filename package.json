@@ -1,0 +1,32 @@
+{
+  "name": "boundle-net",
+  "version": "1.0.0",
+  "description": "Tool that helps to create packages with dependencies to use them.",
+  "main": "index.js",
+  "bin": {
+    "boundle-net": "bound-cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ly-dev12/boundle.git"
+  },
+  "keywords": [
+    "packages",
+    "tool",
+    "create",
+    "dependencies",
+    "easy",
+    "boundle",
+    "boundle-net",
+    "package"
+  ],
+  "author": "ly-dev12",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ly-dev12/boundle/issues"
+  },
+  "homepage": "https://github.com/ly-dev12/boundle#readme"
+}

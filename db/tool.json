@@ -1,0 +1,32 @@
+[{
+    "Name": "Boundle net",
+    "version": "V1.0.0",
+    "propertis": {
+        "run": "windows"
+    },
+    "languaje": "nodejs",
+    "errorCodes": {
+        "245": "does not exist",
+        "1800": "Already exist",
+        "456": "Not register",
+        "755": "Dont found this folder",
+        "404": "Error during process",
+        "1234": "Not pkg install",
+        "808": "This archive is deprecated",
+        "345": "Could not import files to destination folder",
+        "742": "Not more args",
+        "0": "Not found path",
+        "34": "Not deleted error: varius problems",
+        "423": "there are no packages to install",
+        "756": "Not name of pkg",
+        "1990": "arguments are missing"
+    },
+    "comands": [{
+        "create": "Create new pack; boundle create <mypackaname> <deps>; Example: boundle create webpack express bcrypt",
+        "usage": "Use the pack with the specific name",
+        "delete": "Delete a pack",
+        "--Version or -v": "Get version of boundle",
+        "--help or -h": "Get help",
+        "cexp": "show all the commands that are in this experimental stage (not included in the software at the moment)"
+    }]
+}]
