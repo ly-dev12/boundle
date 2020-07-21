@@ -41,8 +41,8 @@ const createBoundle = async (path, carpetNamePkg, tools) => {
       `../boundles/${carpetNamePkg}`
     );
     //console.log(rutePath)
-    var json = await cmd.exec(`cd ${rutePath}` && `npm init -y`, {
-      cwd: rutePath,
+    var json = await cmd.exec(`cd ${path}` && `npm init -y`, {
+      cwd: path,
     });
     json.stdout.on("data", (data) => {
       console.log(data);
@@ -51,8 +51,8 @@ const createBoundle = async (path, carpetNamePkg, tools) => {
     while (i < FilterUndefined.length) {
       const getPkg = FilterUndefined[i];
 
-      var comand = cmd.exec(`cd ${rutePath}` && `npm i ${getPkg}`, {
-        cwd: rutePath,
+      var comand = cmd.exec(`cd ${path}` && `npm i ${getPkg}`, {
+        cwd: path,
       });
 
       if (plus == 0) {
