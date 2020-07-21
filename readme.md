@@ -18,7 +18,7 @@ Boundle is a tool designed to create custom packages, with the modules that you 
 ## Install
 You need to install boundle globally.
 ```js
-npm i -g boundle
+npm i -g boundle-net
 ```
 ---
 
@@ -34,7 +34,7 @@ This command is used to create a new package with the dependencies that you want
 ```cmd
 C:\Users\USER\Desktop>boundle create webpack express method-override bcrypt body-parser 
 ```
-<img src="images/create.png" width="750px">
+<img src="images/create.PNG" width="750px">
 
 - <h2>usage</h2>
 To use this command first go to the directory where you want the package to be copied, then run it like this. <br>
@@ -42,7 +42,7 @@ To use this command first go to the directory where you want the package to be c
 ```cmd
 C:\Users\USER\Desktop\tester>boundle usage webpack
 ```
-<img src="images/usage.png" width="750px">
+<img src="images/usage.PNG" width="750px">
 
 
 - <h2>list</h2>
@@ -51,7 +51,7 @@ The list command outputs the list of all the packages you have created. <br>
 ```cmd
 C:\Users\USER\Desktop>boundle list
 ```
-<img src="images/list.png" width="250px">
+<img src="images/list.PNG" width="250px">
 
 - <h2>delete</h2>
 The delete command deletes a package with the specific name passed to it by parameter. <br>
@@ -59,7 +59,7 @@ The delete command deletes a package with the specific name passed to it by para
 ```cmd
 C:\Users\USER\Desktop>boundle delete webpack
 ```
-<img src="images/delete.png">
+<img src="images/delete.PNG">
 
 - <h2>extend</h2>
 This command is used to add more dependencies to an already created package. <br>
@@ -67,7 +67,7 @@ This command is used to add more dependencies to an already created package. <br
 ```cmd
 C:\Users\USER\Desktop>boundle extend webpack mongoose node-fetch
 ```
-<img src="images/extend.png" width="450px" height="150px">
+<img src="images/extend.PNG" width="450px" height="150px">
 
 - <h2>reduce</h2>
 The reduce command is used for when we want to uninstall a dependency from our package.<br>
@@ -75,7 +75,7 @@ The reduce command is used for when we want to uninstall a dependency from our p
 ```cmd
 C:\Users\USER\Desktop>boundle reduce webpack express mongoose
 ```
-<img src="images/reduce.png" width="550px">
+<img src="images/reduce.PNG" width="550px">
 
 ---
 
@@ -87,7 +87,7 @@ This command removes all the commands that are in experimental version. <br>
 ```cmd
 C:\Users\USER\Desktop>boundle cexp
 ```
-<img src="images/cexp.png">
+<img src="images/cexp.PNG">
 
 - <h2>--version</h2>
 This command brings out the latest version of boundle.<br>
@@ -108,7 +108,7 @@ C:\Users\USER\Desktop>boundle --help
 or
 C:\Users\USER\Desktop>boundle -h
 ```
-<img src="images/help.png" width="450px">
+<img src="images/help.PNG" width="450px">
 
 ---
 
@@ -127,5 +127,5 @@ contributions are welcome, create a pull request and send us your feature, first
 ### [LICENSE MIT](https://opensource.org/licenses/MIT)
 
 <div align="center">
-<img src="logo.png" width="250px">
+<img src="logo.PNG" width="250px">
 <div>
