@@ -1,6 +1,6 @@
 {
   "name": "boundle-net",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tool that helps to create packages with dependencies to use them.",
   "main": "index.js",
   "scripts": {
