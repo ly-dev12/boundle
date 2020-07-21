@@ -36,7 +36,7 @@ const createBoundle = async (path, carpetNamePkg, tools) => {
     //
     let plus = 0;
     //
-    const rutePath = await rute.resolve(
+    const rutePath = await rute.join(
       __dirname,
       `../boundles/${carpetNamePkg}`
     );
