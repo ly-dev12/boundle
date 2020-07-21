@@ -21,7 +21,8 @@
     "easy",
     "boundle",
     "boundle-net",
-    "package"
+    "package",
+    "cli"
   ],
   "author": "ly-dev12",
   "license": "MIT",
