@@ -1,11 +1,8 @@
 {
   "name": "boundle-net",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Tool that helps to create packages with dependencies to use them.",
   "main": "index.js",
-  "bin": {
-    "boundle-net": "bound-cli.js"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

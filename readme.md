@@ -1,7 +1,7 @@
 # Boundle
-<h1 align="center">
-    <img src="./logo.png" width="250px" height="250px" />
-</h1>
+<div align="center">
+    <img src="./logo.PNG" width="250px" height="250px" />
+</div>
 
 [![covergae status](https://badgen.net/npm/license/lodash)](Coverage)
 [![Version Status](https://img.shields.io/badge/version-1.0.0-brightgreen)](Version)
@@ -20,6 +20,17 @@ You need to install boundle globally.
 ```js
 npm i -g boundle-net
 ```
+
+You have to enter AppData \ Roaming \ npm \ node_modules \ boundle-net, and you have to move the file boundle.cmd out.
+
+<img src="images/bound-file.PNG">
+
+to
+
+<img src="images/bound-2.PNG">
+
+### Ready...
+
 ---
 
 ## How to use
@@ -127,5 +138,5 @@ contributions are welcome, create a pull request and send us your feature, first
 ### [LICENSE MIT](https://opensource.org/licenses/MIT)
 
 <div align="center">
-<img src="logo.PNG" width="250px">
+<img src="./logo.PNG" width="250px">
 <div>
