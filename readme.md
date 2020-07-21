@@ -21,14 +21,6 @@ You need to install boundle globally.
 npm i -g boundle-net
 ```
 
-You have to enter AppData \ Roaming \ npm \ node_modules \ boundle-net, and you have to move the file boundle.cmd out.
-
-<img src="images/bound-file.PNG">
-
-to
-
-<img src="images/bound-2.PNG">
-
 ### Ready...
 
 ---
