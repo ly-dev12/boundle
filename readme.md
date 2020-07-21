@@ -1,6 +1,6 @@
 # Boundle
 <div align="center">
-    <img src="./logo.PNG" width="250px" height="250px" />
+    <img src="https://i.imgur.com/2km0DuI.png" width="250px" height="250px" />
 </div>
 
 [![covergae status](https://badgen.net/npm/license/lodash)](Coverage)
@@ -138,5 +138,5 @@ contributions are welcome, create a pull request and send us your feature, first
 ### [LICENSE MIT](https://opensource.org/licenses/MIT)
 
 <div align="center">
-<img src="./logo.PNG" width="250px">
+<img src="https://i.imgur.com/2km0DuI.png" width="250px">
 <div>
