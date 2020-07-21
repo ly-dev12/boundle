@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * Copyright (c) ly-dev12.
  *
