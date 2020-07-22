@@ -41,7 +41,7 @@ const createBoundle = async (path, carpetNamePkg, tools) => {
   })
 
   const splitUndefined = tools.filter((item) => item !== undefined)
-  console.log(splitUndefined);
+  console.log(colors.bgYellow(colors.black("[Installing the following list of dependencies]")), splitUndefined);
 
   let i = 0;
   let plus = 0;
