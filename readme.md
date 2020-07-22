@@ -119,7 +119,7 @@ Developer: ly-dev12
 <br>
 Repository: https://github.com/ly-dev12/boundle
 <br>
-Npm: https://www.npmjs.com/package/boundle-net
+Npm: https://www.npmjs.com/package/boundles
 
 ---
 
