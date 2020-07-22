@@ -99,7 +99,7 @@ async function argvsComprober(argument) {
       //console.log(arrayPkages);
       //console.log(comands.comands[5]);
 
-      const FilterUndefined = tools.filter((item) => item !== undefined);
+      const FilterUndefined = arrayPkages.filter((item) => item !== undefined);
       console.log(
         colors.bgYellow(
           colors.black("[installing the following list of dependencies:]")
