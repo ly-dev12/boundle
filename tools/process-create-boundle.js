@@ -38,7 +38,7 @@ const createBoundle = async (path, carpetNamePkg, tools) => {
     //
     const rutePath = await rute.join(
       __dirname,
-      `../boundles/${carpetNamePkg}`
+      `../boundles/${carpetNamePkg}/`
     );
     //console.log(rutePath)
     var json = await cmd.exec(`cd ${rutePath}` && `npm init -y`, {
