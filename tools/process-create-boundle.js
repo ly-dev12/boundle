@@ -6,73 +6,17 @@
  *
  */
 
-const fs = require("fs");
-const cmd = require("child_process");
-const rute = require("path");
-const colors = require("colors");
-const { Sucess } = require("./utils/sucess");
-const { Error } = require("./utils/error");
-const { Install } = require("./utils/install");
+//const fs = require("fs");
+//const cmd = require("child_process");
+//const rute = require("path");
+//const colors = require("colors");
+//const { Sucess } = require("./utils/sucess");
+//const { Error } = require("./utils/error");
+//const { Install } = require("./utils/install");
 
-const createBoundle = async (path, carpetNamePkg, tools) => {
-  const FilterUndefined = tools.filter((item) => item !== undefined);
-  console.log(
-    colors.bgYellow(
-      colors.black("[installing the following list of dependencies:]")
-    ),
-    FilterUndefined
-  );
-  if (FilterUndefined.length >= 0) {
-    let i = 0;
-
-    //
-    await fs.mkdir(path, (err) => {
-      if (err)
-        console.log(
-          Error("Ups, there was a problem creating this folder", 404)
-        );
-      else console.log(Sucess(`The Boundle ${carpetNamePkg} has been create`));
-    });
-    //
-    let plus = 0;
-    //
-    const rutePath = await rute.join(
-      __dirname,
-      `../boundles/${carpetNamePkg}/`
-    );
-    //console.log(rutePath)
-    var json = await cmd.exec(`cd ${path}` && `npm init -y`, {
-      cwd: path,
-    });
-    json.stdout.on("data", (data) => {
-      console.log(data);
-    });
-
-    while (i < FilterUndefined.length) {
-      const getPkg = FilterUndefined[i];
-
-      var comand = await cmd.exec(`cd ${path}` && `npm i ${getPkg}`, {
-        cwd: path,
-      });
-
-      if (plus == 0) {
-        const msgInstall = comand.stdout.on("data", (data) => {
-          return Install(FilterUndefined);
-        });
-        comand.stdout.on("data", (data) => console.log(data));
-        comand.on("exit", () => {
-          console.log(Install(FilterUndefined));
-        });
-      }
-
-      //await cmd.get(`npm uninstall ${getPkg}`, (err, data) => console.log(data));
-      plus++;
-      i++;
-    }
-  } else {
-    console.log(Error("There are no packages to install", 1234));
-  } // ven a bound-cli.js
-};
+//const createBoundle = async (path, carpetNamePkg, tools) => {
+  
+//};
 
 module.exports = {
   createBoundle,
