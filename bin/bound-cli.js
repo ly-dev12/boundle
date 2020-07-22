@@ -13,7 +13,7 @@ const fs = require("fs");
 const path = require("path");
 const cmd = require("child_process");
 //const { inquirer } = require("../tools/utils/arrive");     // 808 ERROR CODE
-const { createBoundle } = require("../tools/process-create-boundle");
+//const { createBoundle } = require("../tools/process-create-boundle");
 //const { guess } = require("../tools/utils/guessed");  // 808 ERROR CODE
 const props = require("../db/tool.json");
 const fileSystem = require("../tools/utils/fs-extra.js");
@@ -21,7 +21,7 @@ const { colors } = require("../tools/utils/arrive");
 const { help } = require("../tools/utils/help");
 const { expListComands } = require("../tools/utils/exp");
 const { Sucess } = require("../tools/utils/sucess");
-const { Console } = require("console");
+const { Install } = require("../tools/utils/install");
 
 // Principal variable
 const argv = process.argv[2];
@@ -98,11 +98,67 @@ async function argvsComprober(argument) {
 
       //console.log(arrayPkages);
       //console.log(comands.comands[5]);
-      await createBoundle(
-        `${path.join(__dirname, `../boundles/${carpetNamePkg}`)}`,
-        `${carpetNamePkg}`,
-        arrayPkages
+
+      const FilterUndefined = tools.filter((item) => item !== undefined);
+      console.log(
+        colors.bgYellow(
+          colors.black("[installing the following list of dependencies:]")
+        ),
+        FilterUndefined
       );
+      if (FilterUndefined.length >= 0) {
+        let i = 0;
+
+        //
+        const rutePath = await path.join(
+          __dirname,
+          `../boundles/${carpetNamePkg}`
+        );
+
+        await fs.mkdir(rutePath, (err) => {
+          if (err)
+            console.log(
+              Error("Ups, there was a problem creating this folder", 404)
+            );
+          else
+            console.log(Sucess(`The Boundle ${carpetNamePkg} has been create`));
+        });
+        //
+        let plus = 0;
+        //
+        
+        //console.log(rutePath)
+        var json = await cmd.exec(`cd ${rutePath}` && `npm init -y`, {
+          cwd: rutePath,
+        });
+        json.stdout.on("data", (data) => {
+          console.log(data);
+        });
+
+        while (i < FilterUndefined.length) {
+          const getPkg = FilterUndefined[i];
+
+          var comand = await cmd.exec(`cd ${rutePath}` && `npm i ${getPkg}`, {
+            cwd: rutePath,
+          });
+
+          if (plus == 0) {
+            const msgInstall = comand.stdout.on("data", (data) => {
+              return Install(FilterUndefined);
+            });
+            comand.stdout.on("data", (data) => console.log(data));
+            comand.on("exit", () => {
+              console.log(Install(FilterUndefined));
+            });
+          }
+
+          //await cmd.get(`npm uninstall ${getPkg}`, (err, data) => console.log(data));
+          plus++;
+          i++;
+        }
+      } else {
+        console.log(Error("There are no packages to install", 1234));
+      } // ven a bound-cli.js
     }
     //console.log(comands.comands[5]);
   } else if (argument == comands.comands[2]) {
