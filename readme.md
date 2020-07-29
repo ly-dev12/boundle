@@ -18,7 +18,7 @@ Boundle is a tool designed to create custom packages, with the modules that you 
 ## Install
 You need to install boundle globally.
 ```js
-npm i -g boundles
+npm i -g boundle-net
 ```
 
 ### Ready...
